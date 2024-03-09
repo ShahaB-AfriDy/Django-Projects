@@ -1,0 +1,22 @@
+body{
+    background-color: salmon;
+    padding-top: 180px;
+    text-decoration-color: blanchedalmond;
+    text-align: center;
+    font-style:oblique;
+    font-size: xx-large;
+};
+
+h1{
+    color: blue;
+    text-align: center;
+    
+}
+h2{
+    color:yellow;
+    text-align: center;
+}
+p{
+    color:rgb(30, 7, 7);
+    text-align: center;
+}

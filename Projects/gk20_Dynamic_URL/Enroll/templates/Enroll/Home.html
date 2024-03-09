@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Enroll/Style.css' %}">
+    <title>Home</title>
+</head>
+<body>
+    <h1>This is the Home Page</h1>
+    <div>
+        <a class='one' href="{% url 'show-data' 1 %}">Click One</a>
+        <a class='two' href="{% url 'show-data' 2 %}">Click Two</a>
+        <a class='three' href="{% url 'show-data' 3 %}">Click Three</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Data</title>
+    <link rel="stylesheet" href="{% static 'Enroll/style.css' %}">
+</head>
+<body>
+    <h2>This is the Show data</h2>
+    <div class='container'>
+    <table class='centered-table'>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Reg_No</th>
+            <th>Email</th>
+            <th>Password</th>
+        </tr>
+            {% for student in student_data %}
+                <tr>
+                    <td>{{student.Id}}</td>
+                    <td>{{student.Name}}</td>
+                    <td>{{student.Reg_No}}</td>
+                    <td>{{student.Email}}</td>
+                    <td>{{student.Password}}</td>
+                </tr>
+            {% endfor %}
+        
+    </table>
+</div>
+    <a href="{% url 'Home' %}">Home</a>
+    <a href="{% url 'Deleting-Data' %}">Delete Data</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+    {% load static %}
+    {% block 'title' %}
+        Course
+    {% endblock 'title' %}
+
+    {% block 'core_css' %}
+        <link rel="stylesheet" href="{% static 'course/css/course.css' %}">
+        {% endblock 'core_css' %}
+
+    {% block 'content' %}
+    <h1>This is the Course Page</h1>
+        <p>This Paragraph is for Course details<br>
+         Course credits hours etc.</p>
+    
+    {% endblock 'content' %}

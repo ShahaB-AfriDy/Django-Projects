@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{% block 'title' %} By-default Title{% endblock 'title' %}</title>
+
+    {% block 'core_css' %}
+        <link rel="stylesheet" href="{% static 'Core/css/core.css' %}">
+    {% endblock 'core_css' %}
+</head>
+<body>
+    {% block 'content' %}{% endblock 'content' %}
+    {% comment %} {% block 'url_name' %} <a href="/"></a> {% endblock 'url_name' %} {% endcomment %}
+</body>
+</html>

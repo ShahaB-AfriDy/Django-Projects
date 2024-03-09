@@ -1,0 +1,31 @@
+body{
+    background-color: aquamarine;
+    text-align: center;
+    align-items: center;
+    font-size: xx-large;
+    padding-top: 120px;
+}
+.button {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+  }
+.button{border-radius: 12px;}
+
+.h1_home{
+    color: black;
+}
+.h1_form{
+    color:crimson
+}
+
+label{
+    color:blue;
+    font-style:normal;
+}

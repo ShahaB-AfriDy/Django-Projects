@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Enroll/enroll.css' %}">
+    <title>Admin page</title>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Home</a><br>
+        <a href="{% url 'enroll' %}">Enroll</a>
+    </nav>
+    <h1>This is the Admin page</h1>
+</body>
+</html>

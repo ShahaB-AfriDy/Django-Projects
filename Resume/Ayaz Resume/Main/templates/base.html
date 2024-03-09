@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    {% comment %} <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet'> {% endcomment %}
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+
+    {% block 'maincss' %}
+           <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% endblock 'maincss' %}
+
+</head>
+<body>
+    
+
+<div class="container-fluid bg-dark">
+    <div class='row'>
+        <div class='col-sm-2'>
+         {% include "sidebar.html" %}
+        </div>
+
+        <div class='col-sm-10 border-start'>
+        {% block 'content' %}
+            <div class='mt-4'>
+            
+            <div class='text-center'>
+                <img src="{% static 'img/profile2.jpeg' %}" alt="ProfilePic" class="img-thumbnail" width='200px' height='100px'>
+            </div>
+            
+            <div class='mt-2 text-white mx-5 text-justify'>
+                    <h1 class='font-weight-bold st-font'>Hello,</h1>
+                    <div class='px-4' style='line-height:2rem;'>
+                    <p style='text-indent:100px;'>
+                    I am <b class='text-warning'>Ayaz Mehmood</b>, a dedicated professional with a background in <b class='text-warning'> Machine Learning and Data Science</b>.
+                    Over the past two years, I've been immersed in the world of AI, 
+                    honing my skills and expertise.
+                    </p>    
+                    <p>
+                        From developing innovative solutions for healthcare to contributing to industrial automation projects, I thrive on using technology to make a
+                        positive impact. With a passion for learning and a drive for excellence, I'm committed to pushing the boundaries of what's
+                        possible in the field of <b class='text-warning'>Machine Learning and Data Science.</b>
+                    </p>
+                </div>
+            </div>
+            <div class='text-center'>
+                <a href="{% url 'contact' %}" class='btn btn-outline-info my-3'>Contact me</a>
+                <a href='{% url "download-cv" %}' class='btn btn-outline-info my-3 mx-2'>Resume</a>
+            </div>
+
+        
+
+        </div>
+        {% endblock 'content' %}
+            
+        </div>
+    </div>
+</div>
+
+
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/all.min.js' %}"></script>
+<script src="{% static 'js/boostrap.js' %}"></script>
+
+</body>
+</html>

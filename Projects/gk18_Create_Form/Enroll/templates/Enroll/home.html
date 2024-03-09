@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Enroll/enroll.css' %}">
+    <title>Home Page</title>
+</head>
+<body>
+    <a href="{% url 'form' %}"> 
+        <button class="button">Form</button>
+    </a>
+    <h1 class='h1_home'>This is the Home page</h1>
+    <form action="" method="get">
+        <table>
+            {{enroll.as_p}}
+            <input class='button' type="submit" value="Submit">
+        </table>
+</body>
+</html>

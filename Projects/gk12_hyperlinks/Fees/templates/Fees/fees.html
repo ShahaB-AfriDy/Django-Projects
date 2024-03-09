@@ -1,0 +1,13 @@
+{% extends "Core/base.html" %}
+ {% load static %}
+{% block 'title' %}Fees{% endblock 'title' %}
+
+{% block 'core_css' %}
+    <link rel="stylesheet" href="{% static 'Fees/css/fees.css' %}">
+{% endblock 'core_css' %}
+
+{% block 'content' %}
+<h2>This is the Fees page</h2>
+<a href="{% url 'home' %}">Home</a><br>
+<a href="{% url 'about' %}">About</a>
+{% endblock 'content' %}

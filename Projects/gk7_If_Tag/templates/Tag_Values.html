@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Simple Home Page</title>
+<style>
+    body {
+        background-color: skyblue;
+        height: 100vh; /* Set the body to the full viewport height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0; /* Remove default margin */
+        padding: 0; /* Remove default padding */
+    }
+    
+    h1 {
+        margin: 0; /* Remove default margin */
+    }
+    h2 {
+        margin: 0; /* Remove default margin */
+    }
+</style>
+</head>
+<body>
+    <h1>
+    {% for key in Data.keys %}
+       <td> {{key}} </td>
+    {% endfor %}
+    </h1>
+    <br>
+
+    <h2>
+    {% for sub_list in Data.values %}
+        <tr>{{sub_list}}</tr>
+        <br>
+    {% endfor %}
+
+    </h2>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "Enroll/base.html" %}
+
+{% block 'Title' %}<title>Home</title>{% endblock 'Title' %}
+
+{% block 'content' %}
+<div class='align-center'>
+  <h2>This is the Home</h2>
+  <a href="{% url 'user-login' %}">Login</a><br>
+  <a href="{% url 'user-signup' %}">Signup</a>
+</div>
+
+{% endblock 'content' %}

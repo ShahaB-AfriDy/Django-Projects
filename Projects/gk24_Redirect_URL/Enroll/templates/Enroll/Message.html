@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+    <link rel="stylesheet" href="{% static 'Enroll/style.css' %}">
+</head>
+<body>
+    <h2>Thank you for registration</h2>
+     <h5>Email: {{Email}}</h5>
+     <h5>Password: {{Password}}</h5>
+     <a href="{% url 'Home' %}">Home</a>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Data</title>
+        <link rel="stylesheet" href="{% static 'Enroll/enroll.css' %}">
+</head>
+<body>
+    <div>
+        <a href="{% url 'home_index' %}">Home page</a>
+    </div>
+
+    <h1>This is the Tabe</h1>
+    <table>
+        
+        <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Reg NO</th>
+        </tr>
+        
+        <tr>
+            {% for student in student_data %}
+            <tr>
+                <td>{{student.id}}</td>
+                <td>{{student.Name}}</td>
+                <td>{{student.Email}}</td>
+                <td>{{student.Reg_NO}}</td>
+            </tr>
+            {% endfor %}
+        </tr>
+    </table>
+    
+</body>
+</html>

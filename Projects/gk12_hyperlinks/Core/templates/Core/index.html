@@ -1,0 +1,16 @@
+{% extends 'Core/base.html' %}
+
+{% block 'title' %}Home{% endblock 'title' %}
+
+
+{% block 'content' %}
+    <h1>This is the Home Page</h1>
+    <nav>
+    <ul>
+        {% comment %} <il><a href="{% url 'about' %}">About</a></il><br> {% endcomment %}
+        <il><a href="{{hm}}">About</a></il><br>
+        <il><a href="{% url 'course' %}">Course</a></il><br>
+        <il><a href="{% url 'fees'%}">Fees</a></il><br>
+    </ul>
+    </nav>
+{% endblock 'content' %}

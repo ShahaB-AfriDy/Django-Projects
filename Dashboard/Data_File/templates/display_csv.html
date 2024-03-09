@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+    {% block 'maincss' %}
+           <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% endblock 'maincss' %}
+
+    <style>
+        /* Custom CSS */
+        .custom-col-9 {
+            padding-left: 350px; /* Adjust the value as needed */
+        }
+    </style>
+
+</head>
+<body>
+        
+
+    <div class='container'>
+        <div class = 'row'>
+            <div class='col-4 mt-5'>
+                <a href="{% url 'home' %}" class="fw-bold"><h3>Home</h3></a> 
+                <h1>Features:</h1>
+                <ul>
+                    {% for column in Columns %}
+                        <li>
+                            <a class='fw-bold' href="{% url 'calculated' column %}">{{column}}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        
+
+            <div class='col-8 mt-5'>
+                    <h2>{{feature}}</h2>
+                
+                <table class="table table-hover table-secondary">
+                    <thead>
+                      <tr>
+                        {% for key in  Summary.keys %}
+                        <th scope="col">{{key}}</th>
+                         {% endfor %}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        {% for value in  Summary.values %}
+                        <th scope="col">{{ value}}</th>
+                         {% endfor %}
+                      </tr> 
+                  </tbody>
+                  </table>
+            </div>
+                 
+            <div class='col-12 custom-col-9 mx-6'>
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <img src="{% static 'img/mask.png' %}" class="rounded" alt="" width="370" height="350">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <img src="{% static 'img/mask.png' %}" class="rounded" alt="" width="370" height="350">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="{% static 'img/mask.png' %}" class="rounded" alt="" width="370" height="350">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{% static 'img/mask.png' %}" class="rounded" alt="" width="370" height="350">
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>  
+
+
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <script src="{% static 'js/boostrap.js' %}"></script>
+
+</body>
+</html>

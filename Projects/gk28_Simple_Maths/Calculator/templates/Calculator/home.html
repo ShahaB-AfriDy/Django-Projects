@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="centered-content">
+    <form action="" method='POST'>{% csrf_token %}
+        {{math_form.as_p}}
+       
+        <input type="submit" value="Result"><br>
+        {{add_up}}
+    </form>
+</div>
+</body>
+</html>

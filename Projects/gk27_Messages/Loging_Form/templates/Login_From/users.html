@@ -1,0 +1,23 @@
+{% extends "Login_From/base.html" %}
+
+{% block 'content' %}
+<div style="height: 80vh; display: flex; justify-content: center; align-items: center;">
+    <table class='table'>
+        <thead class='table-dark'>
+            <th>Id</th>
+            <th>User</th>
+            <th>Password</th>
+        </thead>
+        <tbody>
+            {% for cell in data %}
+            <tr>
+                <td>{{cell.id}}</td>
+                <td>{{cell.User}}</td>
+                <td>{{cell.Password}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<a href="{% url 'Home' %}" class='btn btn-primary' style="height: 5; display: flex; justify-content: center; align-items: center;" >Home</a>
+{% endblock 'content' %}

@@ -1,0 +1,25 @@
+{% extends "Enroll/base.html" %}
+
+{% block 'Title' %}<title>Signup</title>{% endblock 'Title' %}
+
+{% block 'content' %}
+<form action="" class='my-5 mx-5' method='POST'>
+    {% csrf_token %}
+    
+    {% for cell in form  %}
+    
+    {{cell.label_tag}} {{cell}} {{cell.errors|striptags}} <br>
+    
+    {% endfor %}
+    <input type="submit" value="signup" class='btn btn-primary my-2'>
+
+    {% if messages %}
+    {% for message in messages  %}
+      {{message}}
+    {% endfor %}
+    {% endif %}
+
+</form>    
+<a href="{% url 'home' %}">Home</a><br>
+<a href="{% url 'user-login' %}">Login</a>
+{% endblock 'content' %}

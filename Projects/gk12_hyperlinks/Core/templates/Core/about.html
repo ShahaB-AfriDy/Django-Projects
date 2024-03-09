@@ -1,0 +1,13 @@
+{% extends 'Core/base.html' %}
+{% block 'title'%}About{% endblock 'title' %}
+
+{% block 'content' %}
+  <h1>This is the About Page</h1>
+  
+  {% url 'home' as hm%}
+  <nav>
+    <a href="{{hm}}">Got Home</a>
+  </nav>
+  
+  
+{% endblock 'content' %}

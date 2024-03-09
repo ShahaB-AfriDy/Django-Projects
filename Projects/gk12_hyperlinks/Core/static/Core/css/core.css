@@ -1,0 +1,21 @@
+body{
+    background-color: aqua;
+    padding-top: 180px;
+    text-decoration-color: darkolivegreen;
+    text-align: center;
+    font-style: italic;
+    font-size: xx-large;
+};
+
+h2{
+    text-align: center;
+    color: crimson;
+}
+h1{
+    text-align: center;
+    color: black;
+}
+p{
+    text-align: center;
+    color:yellow;
+}

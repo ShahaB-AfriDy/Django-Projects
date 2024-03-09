@@ -1,0 +1,39 @@
+body{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-family: Arial, sans-serif;
+  min-height: 100vh; /* Ensure the entire viewport height is covered */
+  background-color: hsl(0, 17%, 73%);
+  
+}
+
+h1{
+  color: brown;
+  margin-bottom: 20px;
+}
+h2,h4{
+  color: black;
+  margin-bottom: 20px;
+  
+}
+h3{
+  color: mediumblue;
+  margin-bottom: 20px;  
+}
+
+.image-container {
+  width: 200px; /* Set the desired width */
+  height: 200px; /* Set the desired height */
+  border-radius: 50%; /* Create a circular shape */
+  overflow: hidden; /* Hide any overflow content */
+}
+
+.image-container img {
+  width: 100%; /* Use 100% to fill the container */
+  height: 100%; /* Use 100% to fill the container */
+  object-fit: cover; /* Crop the image to cover the container */
+}

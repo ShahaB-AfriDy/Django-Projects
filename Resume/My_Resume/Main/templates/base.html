@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    {% comment %} <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet'> {% endcomment %}
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+
+    {% block 'maincss' %}
+           <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    {% endblock 'maincss' %}
+
+</head>
+<body>
+    
+
+<div class="container-fluid bg-dark">
+    <div class='row'>
+        <div class='col-sm-2'>
+         {% include "sidebar.html" %}
+        </div>
+
+        <div class='col-sm-10 border-start'>
+        {% block 'content' %}
+            <div class='mt-4'>
+            
+            <div class='text-center'>
+                <img src="{% static 'img/mask.png' %}" alt="ProfilePic" class="img-thumbnail" width='200px' height='100px'>
+            </div>
+            
+            <div class='mt-2 text-white mx-5 text-justify'>
+                    <h1 class='font-weight-bold st-font'>Hello,</h1>
+                    <div class='px-4' style='line-height:2rem;'>
+                    <p style='text-indent:100px;'>
+                        Greetings! I'm <b class='text-warning'>Shahab Afridy</b>, a Software Engineering graduate from
+                    Kohat University. Currently pursuing an MS in Data Science at <b class='text-warning'>NUST</b>,
+                    my journey blends foundational programming skills with a deep dive
+                    into data analytics. Proficient in Python C++ and R my focus lies 
+                    in leveraging technology for real-world impact.
+                    </p>    
+                    <p>
+                    From designing 
+                    software solutions to exploring machine learning, I'm passionate
+                    about staying at tech's forefront. Excited about the endless
+                    possibilities, I aim to contribute meaningfully to the dynamic
+                    fields of <b class='text-warning'>Software Engineering and Data Science.</b>
+                    </p>
+                </div>
+            </div>
+            <div class='text-center'>
+                <a href="{% url 'contact' %}" class='btn btn-outline-info my-3'>Contact me</a>
+            </div>
+        </div>
+        {% endblock 'content' %}
+            
+        </div>
+    </div>
+</div>
+
+
+
+<script src="{% static 'js/jquery.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+<script src="{% static 'js/all.min.js' %}"></script>
+<script src="{% static 'js/boostrap.js' %}"></script>
+
+</body>
+</html>

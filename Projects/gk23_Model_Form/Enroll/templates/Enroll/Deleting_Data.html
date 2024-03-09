@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleting Data</title>
+    <link rel="stylesheet" href="{% static 'Enroll/style.css' %}">
+</head>
+<body>
+    <h2>This is the Deleting Data Page</h2>
+    <table class='centered-table'>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Reg_No</th>
+        </tr>
+            {% for student in student_data %}
+                <tr>
+                    <td>{{student.Id}}</td>
+                    <td>{{student.Name}}</td>
+                    <td>{{student.Reg_No}}</td>
+                    <form action="{% url 'Deleted-Data' student.Id %}" method='POST'>
+                        {% csrf_token %}
+                        <input type="submit" value="Delete">
+                    </form>
+                </tr>
+                
+            {% endfor %}
+    </table>
+
+
+
+    <a href="{% url 'Show-Data' %}">Show Data</a>
+</body>
+</html>

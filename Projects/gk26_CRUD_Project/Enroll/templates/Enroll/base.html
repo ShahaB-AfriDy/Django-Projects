@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block 'My_Title' %}<title>base</title>{% endblock 'My_Title' %}
+    
+    <title>base</title>
+    <link rel="stylesheet" href="{% static 'Enroll/css/bootstrap.css' %}">
+</head>
+<body>
+    
+    <div class='container mt-3'>
+        <h2 class='text-center alert alert-primary'>Students  Data</h2>
+        {% block 'content' %}{% endblock 'content' %}
+    </div>
+
+
+    <script src="{% static 'Enroll/js/jquery.js' %}"></script>
+    <script src="{% static 'Enroll/js/popper.js' %}"></script>
+    <script src="{% static 'Enroll/js/bootstrap.js' %}"></script>
+    
+</body>
+</html>

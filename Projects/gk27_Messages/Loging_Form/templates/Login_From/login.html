@@ -1,0 +1,22 @@
+{% extends "Login_From/base.html" %}
+
+{% block 'My_Title' %}
+<title>Login</title>
+{% endblock 'My_Title' %}
+
+{% block 'content' %}
+<div class='row form-container' style="height: 80vh; display: flex; justify-content: center; align-items: center;">
+    <div class="col-sm-4 offset-4 px-4 ms-xl-4">
+        <h3 class="text-center alert alert-info">Login</h3>
+        <form action="" method='POST'> {% csrf_token %}
+            {{ login_form.as_p }}
+            <input type="submit" class='btn btn-success offset-4' value="login">
+        </form>
+        {% if messages %}
+        {% for message in  messages %}{{message}}{% endfor %}
+        {% else %}
+        {% endif %}
+    </div>
+</div>
+<a href="{% url 'All-Users' %}" class='btn btn-primary' style="height: 5; display: flex; justify-content: center; align-items: center;" >Users</a>
+{% endblock 'content' %}

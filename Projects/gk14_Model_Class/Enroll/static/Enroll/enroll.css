@@ -1,0 +1,18 @@
+body{
+    background-color: aquamarine;
+    padding-top: 180px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+th,td{
+    border: 1px black solid;
+}
+ 
+h1{
+    color: rebeccapurple;
+}
+
+a{
+    color: blue;
+}

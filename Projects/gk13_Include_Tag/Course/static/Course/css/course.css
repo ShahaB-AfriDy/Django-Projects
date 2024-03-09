@@ -1,0 +1,19 @@
+body{
+    background-color: rgb(174, 182, 57);
+    text-align: center;
+    padding-top: 180px;
+    font-size: xx-large;
+}
+a{
+    color:cornflowerblue;
+}
+h1{
+    color: black;
+}
+h2{
+    color: brown;
+}
+li{
+    color: blue;
+    align-items: center;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    {% block 'core_css' %}
+        <link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+    {% endblock 'core_css' %}
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block 'title' %}{% endblock 'title' %}</title>
+</head>
+<body>
+     {% comment %} <ol>
+        <li>hard working</li>
+        <li>practice</li>
+        <li>keep learning new things</li>
+    </ol> {% endcomment %}
+    <p>This is the Base file it will be used to extended<br>
+        for other file html files too.
+    </p>
+    {% block 'content' %}{% endblock 'content' %}
+</body>
+</html>

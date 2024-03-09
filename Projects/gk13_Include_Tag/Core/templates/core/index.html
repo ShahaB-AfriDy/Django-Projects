@@ -1,0 +1,9 @@
+{% extends "core/base.html" %}
+
+{% block 'title' %}Home{% endblock 'title' %}
+
+
+{% block 'content' %}
+    <h1>This is the Home Page</h1>
+    {% include 'core/navbar.html' with key_1="Django" %}
+{% endblock 'content' %}

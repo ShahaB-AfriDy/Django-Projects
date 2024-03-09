@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block 'content' %}
+   <div class='container mt-4 px-5'>
+
+    <h1 class='text-warning mb-5 border-bottom'>CONTACT ME</h1>
+    <div class='row text-white mb-5'>
+        <p class='mx-auto mb-4'>
+            Do you have any question! Please do not hesitate to contact. I will come back
+            to you within  a matter of hours to help you.
+        </p>
+        <div class='col-sm-9 mb-5'>
+            <form action="" method='POST'>
+                {% csrf_token %}
+                <div class="form-row">
+                    <div class='row'>
+                        <div class='col-sm-6  mb-3'>
+                            <label for="inputName">Your Name</label>
+                            <input type="text" class='form-control' id="inputName" placeholder='Enter your Name' name='name'>
+                        </div>
+                        <div class='col-sm-6'>
+                            <label for="inputEmail">Your Email</label>
+                        <input type="email" class='form-control' id="inputEmail" placeholder='Enter your Email' name='email' required />
+                        </div>   
+                    </div>
+                    
+                    {% comment %} <div class='col-md-6'>
+                        <label for="inputName">Your Name</label>
+                        <input type="text" class='form-control' id="inputName">
+                    </div>
+                    <div class='col-sm-6'>
+                        <label for="inputEmail">Your Email</label>
+                        <input type="email" class='form-control' id="inputEmail" required />
+                    </div> {% endcomment %}
+                </div>
+                <div class='form-group  mb-3'>
+                        <label for="inputSubject">Your Subject</label>
+                        <input type="text" class='form-control' id="inputSubject" placeholder='Enter your Subject' name='subject' />
+                </div>
+                <div class='mb-3'>
+                    <label for="inputMessage">Your Message</label>
+                    <textarea class="form-control" id="inputTextarea" name = 'message' required></textarea>
+                </div>
+                <button class='btn btn-primary' type="submit">Send</button>
+
+            </form>
+            <br>
+            {% if messages %}
+                {% for message in messages %}
+                {{message}}
+                  {% endfor %}
+            {% endif %}
+        </div>
+        
+        <div class='col-sm-3 text-center'>
+            <ul class='list-unstyled'>
+                <li>
+                    <i class="fa-solid fa-location-dot i-color"></i>
+                    <p>Ammar Hostel 
+                       NUST H-12, Islamabad</p>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-envelope i-color"></i>
+                    <p>shahabafridy@gmail.com</p>
+                    {% comment %} <p><a href="">shahabafridy@gmail.com</a></p> {% endcomment %}
+
+                </li>
+                <li>
+                    <i class="fa-brands fa-whatsapp i-color"></i>
+                    <p>+92 302 5509950</p>
+                </li>
+            </ul>
+        </div>
+            {% comment %} {{messages}} {% endcomment %}
+        <div class='text-center'>
+            <a href="https://github.com/ShahaB-AfriDy?tab=repositories" style="margin-right: 10px;" target="_blank"><i class="fab fa-github fa-2x i-color"></i></a>
+            <a href="https://www.linkedin.com/in/shahab-afridy-230577207" style="margin-right: 10px;" target="_blank"><i class="fab fa-linkedin fa-2x i-color"></i></a>
+            <a href="https://twitter.com/shahab_afridy" style="margin-right: 10px;" target="_blank"><i class="fab fa-twitter fa-2x i-color"></i></a>
+            <a href="https://www.instagram.com/shahab_afridy/" target="_blank"><i class="fab fa-instagram fa-2x i-color"></i></a>
+        </div>
+        
+        
+    </div>
+   </div>
+
+{% endblock 'content' %}
