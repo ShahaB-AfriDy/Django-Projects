@@ -2,7 +2,7 @@
 ## 💻 ShahaB-AfriDy – Developer Projects Collection
 
 Welcome to my personal repository containing a wide range of **projects, experiments, and applications** developed while learning and building with Python, Django, and Machine Learning.
-Each folder represents a different project — from web apps and APIs to data science and automation tasks.
+Each folder represents a different project  from web apps and APIs to data science and automation tasks.
 
 ---
 
@@ -75,5 +75,3 @@ AI & Full Stack Developer
 🌐 GitHub: [ShahaB-AfriDy](https://github.com/ShahaB-AfriDy)
 
 ---
-
-Would you like me to make a **GitHub profile-style README** version (like a “portfolio intro” for your main GitHub page) based on this same info?
